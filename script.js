@@ -19,7 +19,7 @@ body.insertBefore(button, main);
 let x; //make this variable ajustable by user
 
 
-function blocks(x = 10, y = 10) {
+function blocks(x = 16, y = 16) {
     for (let i = 0; i < x; i++) {
         for (let j = 0; j < y; j++) {
             const cells = document.createElement('div');
