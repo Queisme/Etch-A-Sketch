@@ -29,13 +29,13 @@ function makeCells(userInput = 16) {
             cells.classList.add('cells');
             container.appendChild(cells);
             cells.style.border = '1px solid black';
-            cells.style.height = +cellSize+'px';
-            cells.style.width = +cellSize+'px';
+            cells.style.height = `${cellSize}px`;
+            cells.style.width = `${cellSize}px`;
             cells.addEventListener('mouseenter', () => cells.style.backgroundColor = 'black');
         };
     };
 };
 
-makeCells();
+makeCells(10);
 
 
