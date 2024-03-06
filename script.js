@@ -1,34 +1,41 @@
 const body = document.querySelector('body');
 const header1 = document.querySelector('h1');
 const main = document.querySelector('.main');
+const container = document.createElement('div');
+const button = document.createElement('button');
 body.appendChild(header1);
 body.appendChild(main);
-const box = document.createElement('div');
-main.appendChild(box);
-box.classList.add('box');
-box.style.border = '2px solid black';
-box.style.height = '400px';
-box.style.width = '400px';
-box.style.boxShadow = '2px 2px 2px black';
-const button = document.createElement('button');
-button.textContent = 'Make the magic happen';
+body.appendChild(container);
 body.appendChild(button);
 body.insertBefore(button, main);
-//button.addEventListener('onclick', prompt('Pick a number between 1 - 100'));
+container.classList.add('container');
+button.classList.add('magic');
+button.textContent = 'Magic';
+container.style.height = '400px';
+container.style.width = '400px';
+container.style.border = '3px solid black';
+container.style.display = 'flex';
+container.style.justifyContent = 'space-evenly';
+container.style.alignItems = 'center';
+container.style.flexWrap = 'wrap';
 
-let x; //make this variable ajustable by user
+// 400/userInput = height/width (minus a px for the borders)
 
-
-function blocks(x = 16, y = 16) {
-    for (let i = 0; i < x; i++) {
-        for (let j = 0; j < y; j++) {
+function makeCells(userInput = 16) {
+    const cellSize = (400 / userInput) - 1;
+    for (let i = 0; i < userInput; i++) {
+        for (let j = 0; j < userInput; j++) {
             const cells = document.createElement('div');
             cells.classList.add('cells');
-            box.appendChild(cells);
+            container.appendChild(cells);
             cells.style.border = '1px solid black';
+            cells.style.height = +cellSize+'px';
+            cells.style.width = +cellSize+'px';
             cells.addEventListener('mouseenter', () => cells.style.backgroundColor = 'black');
         };
     };
 };
 
-blocks();
+makeCells();
+
+
