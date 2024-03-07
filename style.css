@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     text-align: center;
-    background-color:rgb(49, 49, 49)
+    background-color:rgb(56, 56, 56)
 }
 
 body {
@@ -23,17 +23,20 @@ body {
     margin: 5px;
 }
 
-button {
+.magic,
+.clear {
     height: 50px;
     width: 100px;
-    color: rgb(95, 95, 95);
+    color: rgb(117, 117, 117);
     border-radius: 10px;
-    margin: 2px;
+    margin: 10px;
     padding: 5px;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 2px 2px 2px black;
 }
 
-.cells {
-    height: 400
+
+button:hover {
+    cursor: pointer;
 }
+
